@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* Popup container - can be customized */
+		.popup {
+			display: block;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.4);
+			backdrop-filter: blur(5px);
+		}
+
+		/* Popup content - can be customized */
+		.popup-content {
+			background-color: #fefefe;
+			margin: 10% auto;
+			padding: 40px;
+			border: 1px solid #888;
+			border-radius: 10px;
+			width: 80%;
+			max-width: 400px;
+			/* text-align: center; */
+			position: relative;
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* Close button - can be customized */
+		.close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 28px;
+			font-weight: bold;
+			color: #888;
+			padding: 5px;
+			cursor: pointer;
+		}
+
+		.popup-content h2 {
+			display: inline;
+			margin: auto;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		.input-field {
+			border-bottom: 2px solid black;
+			display: flex;
+		}
+
+		.input-field input {
+			border: none;
+			margin-top: 40px;
+			padding-bottom: 10px;
+		}
+		.input-field input:focus{
+			outline: none;
+			border: none;
+		}
+		.input-field input:active {
+			border: none;
+		}
+
+		.input-field input::placeholder {
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		.input-field img {
+			margin-left: auto;
+			align-self: last baseline;
+			padding-bottom: 5px;
+		}
+
+		.remember {
+			display: flex;
+			justify-content: space-between;
+			margin: 10px 0;
+		}
+
+		.login-Btn {
+			border: none;
+			width: 300px;
+			padding: 10px 0;
+			border-radius: 5px;
+			margin-top: 20px;
+			display: block;
+			margin: 20px auto 0 auto;
+			background-color: rgb(238, 162, 182);
+			color: white;
+			font-weight: bold;
+		}
+		.donnot{
+			margin: 20px 0px;
+			justify-content: center;
+			display: flex;
+		}
+		.links{
+			font-size: 14px;
+			text-decoration: none;
+			font-weight: bold;
+			padding-left: 3px;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Login modal -->
+	<div id="loginPopup" class="popup">
+		<div class="popup-content">
+			<span class="close" onclick="closePopup()">&times;</span>
+			<h2>Login</h2>
+			<form>
+				<div>
+					<!-- <label for="username">Email</label><br> -->
+					<div class="input-field">
+						<input type="email" id="username" name="username" required placeholder="Email">
+						<img width="20px" src="images/email.png" alt="image">
+					</div>
+				</div>
+				<div>
+					<!-- <label for="password">Password</label><br> -->
+					<div class="input-field">
+						<input type="password" id="password" name="username" required placeholder="Password">
+						<img width="20px" src="images/padlock.png" alt="image">
+					</div>
+				</div>
+				<div class="remember">
+					<span>
+						<input type="checkbox">
+						<label for="">Remember me</label>
+					</span>
+					<a class="links" href="">Forgot Password?</a>
+				</div>
+				<input class="login-Btn" type="submit" value="LOGIN">
+				<div class="donnot">
+					Don't have an account?
+					<a class="links" href="">Register</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="scripts/index.js"></script>
+</body>
+
+</html>

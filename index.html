@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <header class="header_container">
+        <h1>TITLE</h1>
+        <input class="search" type="text" placeholder="Search a product here...">
+    </header>
+    <nav class="nav_component">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="registerBtn" onclick="openRegisterPopUp()">Register</a></li>
+            <li><a href="#" class="loginBtn" onclick="openPopup()">Login</a></li>
+            <li id="categoryBtn">
+              <a href="#">Category</a>
+              <ul class="submenu">
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Perfumes</a></li>
+                <li><a href="#">Bags</a></li>
+                <li><a href="">Clothes</a></li>
+              </ul>
+            </li>
+          </ul>
+    </nav>
+    <div class="banner">
+        <div class="banner_label">
+            <div class="banner_text">
+                WOMEN'S LATEST FASION SALE
+            </div>
+            <div class="shop_now">
+                <div class="shop_now_image">
+                    <img src="images/shopping-cart.png" alt="">
+                </div>
+                <div>Shop now</div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Login modal -->
+	<div id="loginPopup" class="popup">
+		<div class="popup-content">
+			<span class="close" onclick="closePopup()">&times;</span>
+			<h2>Login</h2>
+			<form>
+				<div>
+					<!-- <label for="username">Email</label><br> -->
+					<div class="input-field">
+						<input type="email" id="username" name="username" required placeholder="Email">
+						<img width="20px" src="images/email.png" alt="image">
+					</div>
+				</div>
+				<div>
+					<!-- <label for="password">Password</label><br> -->
+					<div class="input-field">
+						<input type="password" id="password" name="username" required placeholder="Password">
+						<img width="20px" src="images/padlock.png" alt="image">
+					</div>
+				</div>
+				<div class="remember">
+					<span>
+						<input type="checkbox">
+						<label for="">Remember me</label>
+					</span>
+					<a class="links" href="">Forgot Password?</a>
+				</div>
+				<input class="login-Btn" type="submit" value="LOGIN">
+				<div class="donnot">
+					Don't have an account?
+					<a class="links" href="">Register</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+    <!-- register modal -->
+	<div id="registerPopup" class="regPopup">
+		<div class="registerPopup-content">
+			<span class="registerclose" onclick="closeRegisterPopUp()">&times;</span>
+			<h2>Registration</h2>
+			<form>
+                <div>
+					<!-- <label for="username">Email</label><br> -->
+					<div class="register-input-field">
+						<input type="text" id="fullname" name="fullname" required placeholder="Fullname">
+						<img width="20px" src="images/user.png" alt="image">
+					</div>
+				</div>
+				<div>
+					<!-- <label for="username">Email</label><br> -->
+					<div class="register-input-field">
+						<input type="email" id="username" name="username" required placeholder="Email">
+						<img width="20px" src="images/email.png" alt="image">
+					</div>
+				</div>
+				<div>
+					<!-- <label for="password">Password</label><br> -->
+					<div class="register-input-field">
+						<input type="password" id="password" name="username" required placeholder="Password">
+						<img width="20px" src="images/padlock.png" alt="image">
+					</div>
+				</div>
+				<div class="remember">
+					<span>
+						<input type="checkbox">
+						<label for="">I agree to the terms & conditions</label>
+					</span>
+				</div>
+				<input class="register-Btn" type="submit" value="REGISTER">
+				<div class="already">
+					Already have an account?
+					<a class="links" href="">Login</a>
+				</div>
+			</form>
+		</div>
+	</div>
+    <footer class="the_footer">
+
+    </footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="scripts/index.js"></script>
+    <script src="scripts/regiter.js"></script>
+</body>
+
+</html>
