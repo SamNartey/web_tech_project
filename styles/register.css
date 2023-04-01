@@ -1,6 +1,6 @@
 /* Popup container - can be customized */
 .regPopup {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;

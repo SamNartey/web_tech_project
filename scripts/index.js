@@ -18,3 +18,33 @@ window.onclick = function (event) {
 		popup.style.display = "none";
 	}
 }
+
+
+//For the register modal
+var registerPopup = document.getElementById("registerPopup");
+var registerCloseBtn = popup.querySelector(".registerclose");
+
+function openRegisterPopUp() {
+    registerPopup.style.display = "block";
+}
+
+function closeRegisterPopUp() {
+    registerPopup.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == registerPopup) {
+        registerPopup.style.display = "none";
+    }
+}
+
+function toRegister(e){
+	closePopup();
+	openRegisterPopUp();
+	e.preventDefault();
+}
+
+function toLogin(e){
+	closeRegisterPopUp();
+	openPopup();
+	e.preventDefault();
+}
